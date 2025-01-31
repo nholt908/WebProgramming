@@ -42,5 +42,6 @@ addText.addEventListener("click", function(){
 //Remove last paragraph
 removeText.addEventListener("click", function(){
     let lastParagraph = extraTextContainer.lastElementChild;
-    extraTextContainer.removeChild(lastParagraph);
+    if(lastParagraph)
+        {extraTextContainer.removeChild(lastParagraph);}
 })
