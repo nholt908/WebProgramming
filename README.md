@@ -9,3 +9,5 @@ Day 2: Adding images and basic CSS
 Day 3: Different types of CSS styling methods
 
 Day 4: Box model examples
+
+Day 6: JS DOM code along
