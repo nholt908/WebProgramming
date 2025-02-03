@@ -22,3 +22,15 @@ fetchData()
 .catch(error => {
     console.error(error);
 })
+
+//Using async/await
+async function getData(){
+    try{
+        let response = await fetchData();
+        console.log(response);
+    } catch(error){
+        console.log(error);
+    }
+}
+
+getData();
