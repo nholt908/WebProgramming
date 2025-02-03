@@ -11,3 +11,5 @@ Day 3: Different types of CSS styling methods
 Day 4: Box model examples
 
 Day 6: JS DOM code along
+
+Day 7: ES6+ Features
