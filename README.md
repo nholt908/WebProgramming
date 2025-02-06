@@ -13,3 +13,5 @@ Day 4: Box model examples
 Day 6: JS DOM code along
 
 Day 7: ES6+ Features
+
+Day 8: Forms
