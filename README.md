@@ -15,3 +15,5 @@ Day 6: JS DOM code along
 Day 7: ES6+ Features
 
 Day 8: Forms
+
+Day 9: In-class JS Coding (Snippets and Form)
