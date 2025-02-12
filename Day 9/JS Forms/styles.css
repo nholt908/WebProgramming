@@ -1,0 +1,11 @@
+#submit:hover{
+    background-color: palegreen;
+    border: 1px solid green;
+    border-radius: 5px;
+}
+
+.inputError {
+    border: 2px solid red;
+    border-radius: 2px;
+    background-color: rgb(255, 193, 199);
+}

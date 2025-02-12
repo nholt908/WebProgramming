@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nicole">
+    <title>Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form onsubmit="return validation()">
+        Name: <input type="text" id="name" required><br>
+        Email: <input type="email" id="email" required placeholder="user@example.com">
+        <span id="emailError" style="color: red;"></span><br>
+        Age: <input type="number" id="age" required>
+        <span id="ageError" style="color: red;"></span><br>
+        <button id="submit" type="submit">Submit</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
