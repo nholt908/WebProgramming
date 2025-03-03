@@ -7,3 +7,12 @@
     color: aliceblue;
     margin: 10px;
 }
+
+.card:hover{
+    scale: 110%;
+}
+
+button{
+    border: none;
+    border-radius: 2px;
+}
