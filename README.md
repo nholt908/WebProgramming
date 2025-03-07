@@ -26,4 +26,6 @@ Day 12: React
 
 Day 13: useState
 
-Day 14: More React
+Day 14: More React (Mood Tracker)
+
+Day 15: Vite and Tailwind CSS
