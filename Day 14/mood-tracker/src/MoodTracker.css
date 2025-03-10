@@ -1,6 +1,10 @@
 button {
     margin: 5px;
     padding: 10px;
-    border: none;
+    border: solid 1px rgb(48, 48, 48);
     border-radius: 3px;
+}
+
+a {
+    color: darkblue;
 }
