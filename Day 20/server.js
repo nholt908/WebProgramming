@@ -46,6 +46,35 @@ app.post('/posts', async (req, res)=> {
     }
 });
 
+//Add delete and update
+app.delete('/posts/:id', async (req, res)=> {
+    try{
+        const deletedPost = await Post.findByIdAndDelete(req.params.id);
+
+        if (!deletedPost){
+            return res.status(404).json({message: 'Post not found!'})
+        }
+
+        res.status(200).json({message: 'Post deleted successfully!'});
+    } catch(err){
+        console.error('Error deleting post: ', err);
+        res.status(500).json({message: 'Failed to delete post'})
+    }
+});
+
+app.put('/posts/:id', async (req, res)=>{
+    try {
+        const {title, body} = req.body;
+        const updatedPost = await Post.findByIdAndUpdate(req.params.id, {title, body}, {new: true});
+        if(!updatedPost)
+            return res.status(404).json({message: 'Post not found!'});
+        res.json(updatedPost);
+    } catch(err){
+        console.error('Error updating post: ', err);
+        res.status(500).json({message: 'Failed to update post'})
+    }
+})
+
 //Start Server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
