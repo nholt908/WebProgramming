@@ -38,8 +38,8 @@ express, mongoose, cors
 react, axios
 
 ## API Endpoints
-Method	Endpoint	Description
-GET	/posts	Fetch all posts
-POST	/posts	Create a new post
-PUT	/posts/:id	Update a specific post
-DELETE	/posts/:id	Delete a specific post
+Method | Endpoint | Description
+GET | /posts | Fetch all posts
+POST | /posts | Create a new post
+PUT | /posts/:id | Update a specific post
+DELETE | /posts/:id | Delete a specific post
