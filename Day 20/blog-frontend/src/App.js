@@ -5,11 +5,14 @@ function App(){
   const [posts, setPosts] = useState([]);
   const [form, setForm] = useState({title:'', body:''});
   const [editId, setEditId] = useState(null); // add editId state
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     axios.get('http://localhost:5000/posts')
     .then(res => setPosts(res.data))
-    .catch(err => console.error("Error fetching posts:", err));
+    .catch(err => console.error("Error fetching posts:", err))
+    .finally(() => setLoading(false));
   }, []);
 
   const handleChange = (e) => {
@@ -70,15 +73,18 @@ function App(){
         </form>
 
       <h2>Blog Posts</h2>
+      {loading ? (<p style={{textAlign: 'center'}}>Loading posts...</p>) : (
 
-      {posts.map(post =>(
+      posts.map(post =>(
         <div key={post.id} style={{border:'1px solid #ccc', padding:'10px', marginBottom:'15px'}}>
           <h3>{post.title}</h3>
           <p>{post.body}</p>
+          <small style={{color: 'grey'}}>Posted on: {new Date(post.createdAt).toLocaleString()}</small>
           <button onClick={() => handleEdit(post)} style={{padding:'5px', backgroundColor: 'grey', color: 'white'}}>Edit Post</button>
           <button onClick={() => handleDelete(post._id)} style={{padding:'5px', backgroundColor: 'maroon', color: 'white'}}>Delete Post</button>
         </div>
-      ))}
+      ))
+    )}
     </div>
   )
 }
